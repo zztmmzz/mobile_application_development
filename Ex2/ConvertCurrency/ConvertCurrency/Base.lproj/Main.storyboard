@@ -22,7 +22,7 @@
                                 <rect key="frame" x="37.5" y="92" width="300" height="46"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Avt-ap-hLn">
-                                <rect key="frame" x="40" y="200" width="295" height="172"/>
+                                <rect key="frame" x="40" y="186" width="295" height="172"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbq-mc-wfg">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="32"/>
@@ -67,6 +67,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="handleFromCurrencyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w8C-0n-Ly1"/>
+                                                    <action selector="handleHideKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nY8-tK-eRO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -93,6 +94,7 @@
                                                     <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="handleHideKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGm-ji-bqL"/>
                                                     <action selector="handleToCurrencyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRF-qn-ZN7"/>
                                                 </connections>
                                             </button>
@@ -116,18 +118,19 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="handleConvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NuK-tk-Jge"/>
+                                            <action selector="handleHideKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgb-Zv-E8n"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkf-Gu-5PK">
-                                <rect key="frame" x="0.0" y="505" width="375" height="162"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="yXt-Ve-5K6"/>
+                                    <constraint firstAttribute="height" constant="200" id="yXt-Ve-5K6"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-Mx-857">
-                                <rect key="frame" x="40" y="404" width="295" height="69"/>
+                                <rect key="frame" x="40" y="386" width="295" height="49"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                 <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -135,11 +138,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Avt-ap-hLn" firstAttribute="top" secondItem="Y4U-ci-2mn" secondAttribute="bottom" constant="62" id="3P7-4R-aON"/>
+                            <constraint firstItem="Avt-ap-hLn" firstAttribute="top" secondItem="Y4U-ci-2mn" secondAttribute="bottom" constant="48" id="3P7-4R-aON"/>
                             <constraint firstItem="aT5-Mx-857" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bwo-xN-HZS"/>
                             <constraint firstItem="nkf-Gu-5PK" firstAttribute="top" secondItem="aT5-Mx-857" secondAttribute="bottom" constant="32" id="E7Z-yP-UKY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aT5-Mx-857" secondAttribute="trailing" constant="40" id="IdP-yF-4VM"/>
-                            <constraint firstItem="aT5-Mx-857" firstAttribute="top" secondItem="Avt-ap-hLn" secondAttribute="bottom" constant="32" id="MNt-Og-YcM"/>
+                            <constraint firstItem="aT5-Mx-857" firstAttribute="top" secondItem="Avt-ap-hLn" secondAttribute="bottom" constant="28" id="MNt-Og-YcM"/>
                             <constraint firstItem="Y4U-ci-2mn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="Mnh-zV-GLB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Avt-ap-hLn" secondAttribute="trailing" constant="40" id="R9X-MR-24z"/>
                             <constraint firstItem="aT5-Mx-857" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="SAv-SZ-ab5"/>

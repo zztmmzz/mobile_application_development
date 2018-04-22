@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func handleHideKeyboard(_ sender: UIButton) {
+        view.endEditing(true)
+    }
+    
     @IBAction func handleFromCurrencyButton(_ sender: UIButton) {
         isFromCurrencyButton = true
         isToCurrencyButton = false
