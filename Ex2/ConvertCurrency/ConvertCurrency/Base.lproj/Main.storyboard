@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConvertCurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Currency" translatesAutoresizingMaskIntoConstraints="NO" id="Y4U-ci-2mn">
+                                <rect key="frame" x="37.5" y="92" width="300" height="46"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Avt-ap-hLn">
+                                <rect key="frame" x="40" y="200" width="295" height="172"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbq-mc-wfg">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gek-mg-9OX">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="L9C-m0-DeV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-nJ-92g">
+                                                <rect key="frame" x="72" y="0.0" width="223" height="32"/>
+                                                <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Vf8-Ss-8hA"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7D-Tu-5SG">
+                                        <rect key="frame" x="0.0" y="44" width="295" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-9q-dd3">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="BMm-gX-9Qe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWn-Zr-JJR">
+                                                <rect key="frame" x="72" y="0.0" width="223" height="32"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <state key="normal" title="USD">
+                                                    <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleFromCurrencyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w8C-0n-Ly1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="hk3-pp-Flb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucc-oX-eX6">
+                                        <rect key="frame" x="0.0" y="88" width="295" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE9-9J-lN2">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="3kn-aD-Aoc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uft-yz-sd4">
+                                                <rect key="frame" x="72" y="0.0" width="223" height="32"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <state key="normal" title="VND">
+                                                    <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleToCurrencyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRF-qn-ZN7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="0nG-z6-9Ib"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-Ba-1Tl">
+                                        <rect key="frame" x="0.0" y="132" width="295" height="40"/>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.85490196080000003" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="epp-jg-Dty"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Convert"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="handleConvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NuK-tk-Jge"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkf-Gu-5PK">
+                                <rect key="frame" x="0.0" y="505" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="yXt-Ve-5K6"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-Mx-857">
+                                <rect key="frame" x="40" y="404" width="295" height="69"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Avt-ap-hLn" firstAttribute="top" secondItem="Y4U-ci-2mn" secondAttribute="bottom" constant="62" id="3P7-4R-aON"/>
+                            <constraint firstItem="aT5-Mx-857" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bwo-xN-HZS"/>
+                            <constraint firstItem="nkf-Gu-5PK" firstAttribute="top" secondItem="aT5-Mx-857" secondAttribute="bottom" constant="32" id="E7Z-yP-UKY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aT5-Mx-857" secondAttribute="trailing" constant="40" id="IdP-yF-4VM"/>
+                            <constraint firstItem="aT5-Mx-857" firstAttribute="top" secondItem="Avt-ap-hLn" secondAttribute="bottom" constant="32" id="MNt-Og-YcM"/>
+                            <constraint firstItem="Y4U-ci-2mn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="Mnh-zV-GLB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Avt-ap-hLn" secondAttribute="trailing" constant="40" id="R9X-MR-24z"/>
+                            <constraint firstItem="aT5-Mx-857" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="SAv-SZ-ab5"/>
+                            <constraint firstItem="nkf-Gu-5PK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zri-DS-yFG"/>
+                            <constraint firstItem="Y4U-ci-2mn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8c-cP-QRf"/>
+                            <constraint firstItem="Avt-ap-hLn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="cAN-Qp-Dm9"/>
+                            <constraint firstItem="nkf-Gu-5PK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nsb-9g-rwB"/>
+                            <constraint firstItem="nkf-Gu-5PK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pHX-jh-97k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="HWa-nJ-92g" id="m5V-87-IBg"/>
+                        <outlet property="fromButton" destination="WWn-Zr-JJR" id="QZb-1w-cp4"/>
+                        <outlet property="pickerView" destination="nkf-Gu-5PK" id="h2T-Ja-0qo"/>
+                        <outlet property="resultLabel" destination="aT5-Mx-857" id="LsZ-6Y-iO5"/>
+                        <outlet property="toButton" destination="Uft-yz-sd4" id="sCl-9B-rXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Currency" width="300" height="46"/>
+    </resources>
+</document>
